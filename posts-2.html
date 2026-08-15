@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/2) · sf-t3-1779642675702-413</title>
+  <meta name="description" content="sf-t3-1779642675702-413에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://sf-t3-1779642675702-413.maphoshirts.xyz/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* --- Brutalist Avant-Garde / Neon Void Design System (재사용) --- */
+ *{margin:0;padding:0;box-sizing:border-box}
+ body{font-family:'Courier New',Courier,monospace;background:#0d0d0d;color:#e0e0e0;line-height:1.6}
+ .container{max-width:1200px;margin:0 auto;padding:0 20px}
+ /* 헤더 */
+ .header{background:#111;padding:15px 0;border-bottom:4px solid #00ffc8}
+ .header .container{display:flex;justify-content:space-between;align-items:center}
+ .logo{font-size:1.8rem;font-weight:700;color:#00ffc8;text-transform:uppercase;letter-spacing:2px}
+ .logo a{color:#00ffc8;text-decoration:none}
+ .hamburger-menu{display:none;background:none;border:none;color:#00ffc8;font-size:2rem;cursor:pointer;padding:5px}
+ .nav{display:flex;gap:25px;list-style:none}
+ .nav li a{color:#ccc;text-decoration:none;font-size:1rem;text-transform:uppercase;letter-spacing:1px;transition:color 0.2s}
+ .nav li a:hover{color:#00ffc8}
+ .nav li a.active{color:#00ffc8;border-bottom:2px solid #00ffc8}
+ /* 메인 */
+ .main{padding:50px 0}
+ .blog-header{margin-bottom:40px;padding-bottom:20px;border-bottom:2px dashed #333}
+ .blog-header .category{display:inline-block;padding:4px 12px;background:#00ffc8;color:#0d0d0d;font-weight:700;font-size:0.8rem;letter-spacing:1px;margin-bottom:15px}
+ .blog-header h1{font-size:2.4rem;color:#fff;line-height:1.3;margin-bottom:10px}
+ .blog-header .meta{color:#888;font-size:0.9rem;display:flex;gap:20px;flex-wrap:wrap}
+ .blog-header .meta span{display:flex;align-items:center;gap:5px}
+ .blog-content{max-width:900px;margin:0 auto}
+ .blog-content h2{color:#00ffc8;font-size:1.8rem;margin:40px 0 15px;border-left:5px solid #00ffc8;padding-left:15px}
+ .blog-content h3{color:#fff;font-size:1.4rem;margin:30px 0 10px}
+ .blog-content p{font-size:1.05rem;color:#c0c0c0;margin-bottom:20px;text-align:justify}
+ .blog-content p strong{color:#fff}
+ .blog-content ul, .blog-content ol{margin:0 0 20px 25px;color:#c0c0c0}
+ .blog-content li{margin-bottom:8px}
+ .blog-content blockquote{border-left:4px solid #00ffc8;background:#1a1a1a;padding:15px 20px;margin:20px 0;color:#aaa;font-style:italic}
+ .blog-content .highlight-box{background:#1a1a1a;border:1px solid #333;padding:20px;margin:20px 0;border-radius:4px}
+ .blog-content .highlight-box .stat{font-size:2.5rem;font-weight:700;color:#00ffc8;display:block;line-height:1}
+ .blog-content .highlight-box .label{color:#aaa;font-size:0.9rem;margin-top:5px}
+ .blog-content table{width:100%;border-collapse:collapse;margin:25px 0}
+ .blog-content table th{background:#1a1a1a;color:#00ffc8;padding:12px 10px;text-align:left;border-bottom:2px solid #00ffc8}
+ .blog-content table td{padding:10px;border-bottom:1px solid #333;color:#c0c0c0}
+ .blog-content table tr:hover td{background:#1a1a1a}
+ /* FAQ */
+ .faq-section{margin-top:60px;padding-top:30px;border-top:2px solid #333}
+ .faq-section h2{color:#00ffc8;font-size:1.8rem;margin-bottom:25px}
+ .faq-item{margin-bottom:20px;border:1px solid #333;padding:15px 20px;border-radius:4px;background:#111}
+ .faq-item h3{color:#fff;font-size:1.1rem;margin-bottom:8px;cursor:pointer}
+ .faq-item p{color:#aaa;font-size:0.95rem}
+ /* CTA */
+ .cta-section{background:#111;padding:40px;margin:50px 0;text-align:center;border:1px solid #333;border-radius:4px}
+ .cta-section h2{color:#00ffc8;font-size:1.8rem;margin-bottom:15px}
+ .cta-section p{color:#ccc;margin-bottom:20px;font-size:1rem}
+ .cta-btn{display:inline-block;padding:12px 30px;background:#00ffc8;color:#0d0d0d;font-weight:700;text-transform:uppercase;letter-spacing:1px;text-decoration:none;transition:background 0.2s}
+ .cta-btn:hover{background:#00e0b0}
+ /* 푸터 */
+ .footer{background:#111;padding:30px 0;border-top:4px solid #00ffc8;text-align:center;color:#888;font-size:0.9rem}
+ .footer .container{display:flex;flex-direction:column;align-items:center;gap:10px}
+ .footer .contact{color:#aaa;font-size:1rem}
+ .footer .contact a{color:#00ffc8;text-decoration:none}
+ .footer .copyright{color:#666}
+ /* 반응형 */
+ @media (max-width:768px){
+ .hamburger-menu{display:block}
+ .nav{display:none;flex-direction:column;background:#111;position:absolute;top:70px;left:0;width:100%;padding:20px;gap:15px;border-bottom:2px solid #00ffc8}
+ .nav.open{display:flex}
+ .blog-header h1{font-size:1.8rem}
+ .blog-content h2{font-size:1.4rem}
+ .blog-content table{font-size:0.9rem}
+ }
+ .responsive-768 .hamburger-menu{display:block}
+ /* 햄버거 토글용 JS는 이후 추가 */
+ </style>
+  <meta property="og:title" content="글 목록 (2/2) · sf-t3-1779642675702-413">
+  <meta property="og:description" content="sf-t3-1779642675702-413에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://sf-t3-1779642675702-413.maphoshirts.xyz/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+ <div class="container">
+ <div class="logo"><a href="/">SEO 오토파일럿</a></div>
+ <button class="hamburger-menu" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="메뉴 열기">☰</button>
+ <ul class="nav">
+ <li><a href="/">홈</a></li>
+ <li><a href="/services">서비스</a></li>
+ <li><a href="/pricing">가격</a></li>
+ <li><a href="/blog" class="active">블로그</a></li>
+ <li><a href="/contact">문의</a></li>
+ </ul>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 33개 · 2/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0218.html">SEO 오토파일럿 가격 분석과 구글 신뢰 지수 모발이식 솔루션 활용법</a>
+        <p class="post-item__summary">많은 이들이 자동화 도구만 사용하면 순위가 즉각적으로 상승할 것이라는 오해를 합니다. SEO 오토파일럿 가격 산정 방식을 살펴보는 것도 중요하지만, 본질은 검색 엔진이 신뢰할 수 있는 정보를 제공하</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0309.html">SEO 오토파일럿 가격 분석으로 보는 합정 셔츠룸 추천정보</a>
+        <p class="post-item__summary">디지털 마케팅 분야에서 흔히 언급되는 SEO 오토파일럿 가격 기준을 확인하는 것처럼, 오프라인 서비스 업체를 선택할 때도 투명한 기준이 필요합니다. 합정 지역에서 셔츠룸을 찾을 때 가장 중요한 것은</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0310.html">SEO 오토파일럿 가격 비교와 공덕 가라오케 추천정보</a>
+        <p class="post-item__summary">소프트웨어 도입 시 SEO 오토파일럿 가격 대비 효율을 따져보는 것과 같이, 공덕 인근에서 가라오케를 예약할 때도 비용 대비 효용성을 분석하는 것이 필수입니다. 보통 사용자는 저렴한 기본료를 강조하</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0311.html">SEO 오토파일럿 가격 고려 전 체크할 상수 마사지 추천정보</a>
+        <p class="post-item__summary">많은 이들이 소프트웨어 투자 시 SEO 오토파일럿 가격을 신중히 검토하듯, 피로를 풀기 위해 방문하는 상수 마사지 샵을 고를 때도 세심한 주의가 필요합니다. 하지만 대부분은 가격표만 확인하고 예약을</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0312.html">SEO 오토파일럿 가격 기준과 망원 노래방 추천정보 확인법</a>
+        <p class="post-item__summary">마케팅 예산을 집행할 때 SEO 오토파일럿 가격 효율을 따져보는 것처럼, 망원 지역 노래방을 선택할 때도 체크리스트를 통해 꼼꼼하게 따져봐야 합니다. 단순히 가까운 위치만 보고 선택했다가 접근성이나</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0313.html">SEO 오토파일럿 가격 비교보다 중요한 홍대 노래방 추천정보 확인법</a>
+        <p class="post-item__summary">오랜만에 만난 친구들과 밤늦게까지 홍대 거리를 거닐다 보면 누구나 한 번쯤 노래방을 찾게 됩니다. 막상 골목 안쪽으로 들어가면 수많은 간판이 쏟아져 나와 어디를 가야 할지 막막한 기분이 들곤 합니다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0314.html">SEO 오토파일럿 가격 분석으로 풀어보는 공덕 셔츠룸 추천정보 가이드</a>
+        <p class="post-item__summary">공덕 지역에서 즐길 거리를 찾을 때 셔츠룸에 대해 막연한 선입견을 갖는 경우가 많습니다. 흔히 이 시스템이 무조건 폐쇄적이거나 고가의 비용만을 요구한다는 오해를 하지만, 이는 업체마다 시스템이 천차</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0315.html">SEO 오토파일럿 가격 살펴볼 때 고려할 연남 유흥 추천정보 기준</a>
+        <p class="post-item__summary">연남동에서 유흥 공간을 찾을 때 가장 먼저 고려해야 할 요소는 모임의 목적과 인원 구성입니다. 인원이 많을수록 공간의 수용 능력과 서비스의 일관성이 보장되어야 합니다. SEO 오토파일럿 가격 정보와</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0316.html">SEO 오토파일럿 가격 확인 후 마곡 가라오케 추천정보 선별 기준</a>
+        <p class="post-item__summary">당신은 오늘 밤 마곡에서 가라오케를 방문하려 할 때 가장 중요하게 생각하는 기준이 무엇인가요? 아마 시설의 퀄리티와 서비스의 신뢰도일 것입니다. 인터넷상에 떠도는 SEO 오토파일럿 가격 정보가 과연</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0317.html">SEO 오토파일럿 가격 비교 분석을 통한 마곡 유흥 추천정보 가이드</a>
+        <p class="post-item__summary">디지털 마케팅의 영역에서 SEO 오토파일럿 가격 정책을 분석하는 것은 특정 서비스의 신뢰도를 파악하는 것과 유사한 측면이 있습니다. 마곡 지역에서 유흥 업소를 찾을 때도 정보의 투명성이 매우 중요하</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0318.html">SEO 오토파일럿 가격 전략과 비교하는 합정 노래방 추천정보의 기준</a>
+        <p class="post-item__summary">비즈니스 효율성을 위해 SEO 오토파일럿 가격 정책을 검토하듯, 합정 노래방을 이용할 때도 가격과 서비스의 상관관계를 냉철하게 분석해야 합니다. 우리는 흔히 저렴한 가격만을 우선시하거나, 반대로 무</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0319.html">SEO 오토파일럿 가격 검토만큼 중요한 연남 클럽 추천정보 예약 팁</a>
+        <p class="post-item__summary">많은 이들이 SEO 오토파일럿 가격 정보를 살피며 효율을 따지지만, 정작 중요한 주말 저녁 연남동의 핫플레이스를 방문할 때는 무작정 현장으로 향하는 실수를 범하곤 합니다. 클럽 예약은 단순히 자리를</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/review-002-elxvf4.html">SEO 오토파일럿 가격 솔직 후기</a>
+        <p class="post-item__summary">최근 네트워크 보안 분야의 경쟁이 치열해지면서 온라인 검색 결과 상단에 노출되는 것이 비즈니스의 생존과 직결되고 있습니다. 마포 지역에서 활동하는 많은 보안 업체 관계자들께서 검색 엔진 최적화 도구</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
